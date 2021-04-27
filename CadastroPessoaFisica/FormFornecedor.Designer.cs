@@ -1,7 +1,7 @@
 ﻿
 namespace CadastroPessoaFisica
 {
-    partial class FormMain
+    partial class FormFornecedor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,22 +29,10 @@ namespace CadastroPessoaFisica
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.SuspendLayout();
-            // 
-            // FormMain
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(844, 538);
-            this.DoubleBuffered = true;
-            this.Name = "FormMain";
-            this.Text = "VENDA MAIS+";
-            this.Load += new System.EventHandler(this.FormMain_Load);
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "FormFornecedor";
         }
 
         #endregion
