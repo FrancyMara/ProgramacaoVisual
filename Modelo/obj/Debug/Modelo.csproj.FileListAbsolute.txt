@@ -1,12 +1,5 @@
-C:\Users\Kramer IT\source\repos\ProgVisual2021\Modelo\bin\Debug\Modelo.dll
-C:\Users\Kramer IT\source\repos\ProgVisual2021\Modelo\bin\Debug\Modelo.pdb
-C:\Users\Kramer IT\source\repos\ProgVisual2021\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
-C:\Users\Kramer IT\source\repos\ProgVisual2021\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
-C:\Users\Kramer IT\source\repos\ProgVisual2021\Modelo\obj\Debug\Modelo.dll
-C:\Users\Kramer IT\source\repos\ProgVisual2021\Modelo\obj\Debug\Modelo.pdb
-C:\Users\francy.silva\Downloads\ProgVisual2021\Modelo\bin\Debug\Modelo.dll
-C:\Users\francy.silva\Downloads\ProgVisual2021\Modelo\bin\Debug\Modelo.pdb
-C:\Users\francy.silva\Downloads\ProgVisual2021\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
-C:\Users\francy.silva\Downloads\ProgVisual2021\Modelo\obj\Debug\Modelo.dll
-C:\Users\francy.silva\Downloads\ProgVisual2021\Modelo\obj\Debug\Modelo.pdb
-C:\Users\francy.silva\Downloads\ProgVisual2021\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Github\ProgramacaoVisual\Modelo\bin\Debug\Modelo.dll
+C:\Github\ProgramacaoVisual\Modelo\bin\Debug\Modelo.pdb
+C:\Github\ProgramacaoVisual\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Github\ProgramacaoVisual\Modelo\obj\Debug\Modelo.dll
+C:\Github\ProgramacaoVisual\Modelo\obj\Debug\Modelo.pdb
