@@ -44,6 +44,7 @@
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Endereco.cs" />
     <Compile Include="Entidades\Estado.cs" />
+    <Compile Include="Entidades\Fornecedor.cs" />
     <Compile Include="Entidades\ItemVenda.cs" />
     <Compile Include="Entidades\Municipio.cs" />
     <Compile Include="Entidades\Pessoa.cs" />

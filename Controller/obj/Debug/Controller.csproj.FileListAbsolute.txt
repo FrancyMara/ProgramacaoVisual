@@ -9,3 +9,14 @@ C:\Github\ProgramacaoVisual\Controller\obj\Debug\Controller.csproj.CoreCompileIn
 C:\Github\ProgramacaoVisual\Controller\obj\Debug\Controller.csproj.CopyComplete
 C:\Github\ProgramacaoVisual\Controller\obj\Debug\Controller.dll
 C:\Github\ProgramacaoVisual\Controller\obj\Debug\Controller.pdb
+C:\Projetos\ProgVisual2021\Controller\bin\Debug\Controller.dll
+C:\Projetos\ProgVisual2021\Controller\bin\Debug\Controller.pdb
+C:\Projetos\ProgVisual2021\Controller\bin\Debug\DAO.dll
+C:\Projetos\ProgVisual2021\Controller\bin\Debug\Modelo.dll
+C:\Projetos\ProgVisual2021\Controller\bin\Debug\DAO.pdb
+C:\Projetos\ProgVisual2021\Controller\bin\Debug\Modelo.pdb
+C:\Projetos\ProgVisual2021\Controller\obj\Debug\Controller.csprojAssemblyReference.cache
+C:\Projetos\ProgVisual2021\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Projetos\ProgVisual2021\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\Projetos\ProgVisual2021\Controller\obj\Debug\Controller.dll
+C:\Projetos\ProgVisual2021\Controller\obj\Debug\Controller.pdb
