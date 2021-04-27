@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Controller",
+    "\\Controller\\Interfaces",
+    "\\Controller\\Properties",
+    "\\Modelo"
   ],
+  "SelectedNode": "\\ProgVisual2021.sln",
   "PreviewInSolutionExplorer": false
 }
