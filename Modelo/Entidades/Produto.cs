@@ -2,14 +2,12 @@
 {
     public class Produto : ClasseBase
     {
-        
-        public string nome { get; set } 
+        public string Nome { get; set; }
         public decimal Preco { get; set; }
+        public decimal QuantidadeEstoque { get; set; }
 
-        public decimal qtdidadeEstoque {get; set;
-
-        
-
+        public Categoria Categoria { get; set; }
+        public Fornecedor Fornecedor { get; set; }
         
     }
 }

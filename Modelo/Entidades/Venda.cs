@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Modelo.Entidades
 {
-    public class Venda
+    public class Venda: ClasseBase
     {
-        public long ID { get; set; }
-        public PessoaFisica Cliente { get; set; }
+
+        public decimal ValorTotal { get; set; }
+        public DateTime Data { get; set; }
+        
+        public Cliente Cliente { get; set; }
 
         public List<ItemVenda> Itens { get; set; }
     }

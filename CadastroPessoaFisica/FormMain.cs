@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controller.Funcoes;
+using Modelo.Entidades;
 
 namespace CadastroPessoaFisica
 {
     public partial class FormMain : Form
     {
-        // TODAS AS LISTAS DE OBJETOS
-        private List<object> Pessoas = new List<object>();
+        // OBJETOS        
         private List<object> Fornecedores = new List<object>();
         private List<object> Clientes = new List<object>();
         private List<object> Produtos = new List<object>();
@@ -23,10 +23,9 @@ namespace CadastroPessoaFisica
         private List<object> Vendedores = new List<object>();
 
 
-        // TODOS OS CONTROLADORES
-        private ControladorPessoaFisica controladorPessoaFisica;
+        // CONTROLADORES        
         private ControladorFornecedor controladorFornecedor;
-        private ControladorCliente controlodarCliente;
+        private ControladorCliente controladorCliente;
 
         //TODO CRIAR
         //private ControladorProduto controladorProduto;
@@ -39,7 +38,10 @@ namespace CadastroPessoaFisica
         {
             this.IsMdiContainer = true;
 
-            InicializarControladores();            
+            InicializarControladores();
+
+            InicializarListas();
+
             InitializeComponent();
 
             // Create a MenuStrip control with a new window.
@@ -79,16 +81,27 @@ namespace CadastroPessoaFisica
 
         }
 
-        private void InicializarControladores()
+        private void InicializarListas()
         {
-            controladorPessoaFisica = new ControladorPessoaFisica(Pessoas);
+            var cliente = new Cliente();
+
+            cliente.Id = 1;
+            cliente.Nome = "José";
+            cliente.Telefone = "45353535635";
+            cliente.Email = "teste@teste.com";
+
+            Clientes.Add(cliente);
+        }
+
+        private void InicializarControladores()
+        {            
             controladorFornecedor = new ControladorFornecedor(Fornecedores);
-            controlodarCliente = new ControladorCliente(Clientes);
+            controladorCliente = new ControladorCliente(Clientes);
         }
 
         void MenuClienteClicado(object sender, EventArgs e)
         {
-            Form f = new FormPessoaFisica(controladorPessoaFisica);
+            Form f = new FormCliente(controladorCliente);
             f.MdiParent = this;
             f.Text = "Form - " + this.MdiChildren.Length.ToString();
             f.Show();
