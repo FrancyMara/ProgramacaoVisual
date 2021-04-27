@@ -42,10 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Funcoes\ControladorCliente.cs" />
-    <Compile Include="Funcoes\ControladorPessoaFisica.cs" />
+    <Compile Include="Funcoes\ControladorFornecedor.cs" />
     <Compile Include="Interfaces\IControllerCliente.cs" />
     <Compile Include="Interfaces\IControllerFornecedor.cs" />
-    <Compile Include="Interfaces\IControllerPessoaFisica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

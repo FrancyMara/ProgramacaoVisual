@@ -16,6 +16,12 @@ C:\Users\francy.silva\Downloads\ProgVisual2021\CadastroPessoaFisica\obj\Debug\Ca
 C:\Users\francy.silva\Downloads\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.pdb
 C:\Users\francy.silva\Downloads\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormMain.resources
 C:\Users\francy.silva\Downloads\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormPessoaFisica.resources
+C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csprojAssemblyReference.cache
+C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormFornecedor.resources
+C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormMain.resources
+C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.Properties.Resources.resources
+C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csproj.GenerateResource.cache
+C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csproj.CoreCompileInputs.cache
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\bin\Debug\CadastroPessoaFisica.exe.config
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\bin\Debug\CadastroPessoaFisica.exe
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\bin\Debug\CadastroPessoaFisica.pdb
@@ -25,12 +31,7 @@ C:\Projetos\ProgVisual2021\CadastroPessoaFisica\bin\Debug\Modelo.dll
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\bin\Debug\Controller.pdb
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\bin\Debug\DAO.pdb
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\bin\Debug\Modelo.pdb
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csprojAssemblyReference.cache
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormMain.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormPessoaFisica.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.Properties.Resources.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csproj.GenerateResource.cache
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csproj.CoreCompileInputs.cache
+C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormCliente.resources
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csproj.CopyComplete
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.exe
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.pdb

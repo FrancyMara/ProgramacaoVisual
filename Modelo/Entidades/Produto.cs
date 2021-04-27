@@ -1,20 +1,13 @@
 ﻿namespace Modelo.Entidades
 {
-    public class Produto
+    public class Produto : ClasseBase
     {
-        public long Codigo { get; set; }
         public string Nome { get; set; }
         public decimal Preco { get; set; }
+        public decimal QuantidadeEstoque { get; set; }
 
-        public Produto()
-        {
-        }
-
-        public Produto(long Codigo, string Nome, decimal Preco)
-        {
-            this.Codigo = Codigo;
-            this.Nome = Nome;
-            this.Preco = Preco;
-        }
+        public Categoria Categoria { get; set; }
+        public Fornecedor Fornecedor { get; set; }
+        
     }
 }
