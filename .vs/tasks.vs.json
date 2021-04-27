@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "tarefa-ControladorPessoaFisica",
+      "appliesTo": "Controller/Funcoes/ControladorPessoaFisica.cs",
+      "type": "launch"
+    }
+  ]
+}
