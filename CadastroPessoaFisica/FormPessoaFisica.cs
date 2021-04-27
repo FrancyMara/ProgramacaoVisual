@@ -162,5 +162,10 @@ namespace CadastroPessoaFisica
         {
 
         }
+
+        private void txt_Nome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

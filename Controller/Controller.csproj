@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Funcoes\ControladorCliente.cs" />
+    <Compile Include="Funcoes\ControladorFornecedor.cs" />
     <Compile Include="Funcoes\ControladorPessoaFisica.cs" />
     <Compile Include="Interfaces\IControllerCliente.cs" />
     <Compile Include="Interfaces\IControllerFornecedor.cs" />

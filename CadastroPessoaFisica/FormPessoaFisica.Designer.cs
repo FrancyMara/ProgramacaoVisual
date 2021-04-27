@@ -112,6 +112,7 @@ namespace CadastroPessoaFisica
             this.txt_Nome.Name = "txt_Nome";
             this.txt_Nome.Size = new System.Drawing.Size(345, 20);
             this.txt_Nome.TabIndex = 1;
+            this.txt_Nome.TextChanged += new System.EventHandler(this.txt_Nome_TextChanged);
             // 
             // label4
             // 

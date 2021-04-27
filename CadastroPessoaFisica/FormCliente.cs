@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CadastroPessoaFisica
 {
-    public partial class FormCliente : Form
+    public partial class Clientes : Form
     {
-        public FormCliente()
+        public Clientes()
         {
             InitializeComponent();
+        }
+
+        private void FormCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

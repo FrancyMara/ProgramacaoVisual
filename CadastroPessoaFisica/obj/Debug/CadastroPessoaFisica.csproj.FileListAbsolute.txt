@@ -34,3 +34,5 @@ C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.c
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csproj.CopyComplete
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.exe
 C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.pdb
+C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormCliente.resources
+C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormFornecedor.resources

@@ -10,6 +10,12 @@ namespace Controller.Funcoes
 {
     public class ControladorCliente : DAO.DB.Controller, IControllerCliente
     {
+
+        public ControladorCliente(List<object> clientes)
+        {
+            Objetos = clientes;
+        }
+
         public Cliente GetCliente(string nome)
         {
             foreach (var cli in Objetos)
