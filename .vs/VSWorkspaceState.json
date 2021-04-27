@@ -4,7 +4,8 @@
     "\\Controller",
     "\\Controller\\Interfaces",
     "\\Controller\\Properties",
-    "\\Modelo"
+    "\\Modelo",
+    "\\Modelo\\Entidades"
   ],
   "SelectedNode": "\\ProgVisual2021.sln",
   "PreviewInSolutionExplorer": false

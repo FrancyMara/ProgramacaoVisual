@@ -53,3 +53,5 @@ C:\Users\carla\Source\Repos\ProgramacaoVisual\CadastroPessoaFisica\obj\Debug\Cad
 C:\Users\carla\Source\Repos\ProgramacaoVisual\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csproj.CopyComplete
 C:\Users\carla\Source\Repos\ProgramacaoVisual\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.exe
 C:\Users\carla\Source\Repos\ProgramacaoVisual\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.pdb
+C:\Users\carla\Source\Repos\ProgramacaoVisual\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormCliente.resources
+C:\Users\carla\Source\Repos\ProgramacaoVisual\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormFornecedor.resources
