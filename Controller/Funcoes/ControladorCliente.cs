@@ -59,8 +59,21 @@ namespace Controller.Funcoes
 
         public bool Salvar(Cliente cliente, bool Editando)
         {
-            Objetos.Add(cliente);
-            return true;
+  
+                if (cliente == null)
+                    return false;
+
+                if (Editando)
+                    for (int i = 0; i < Objetos.Count; i++)
+                    {
+                        if (Objetos[i].Equals(cliente))
+                            Objetos[i] = cliente;
+                    }
+                else
+                    Objetos.Add(cliente);
+
+                return true;
+            
         }
     }
 }
