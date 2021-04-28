@@ -37,6 +37,9 @@ namespace CadastroPessoaFisica
             this.txt_TelefoneCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_EmailCliente = new System.Windows.Forms.TextBox();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.dgv_Dados = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Dados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -104,11 +107,31 @@ namespace CadastroPessoaFisica
             this.txt_EmailCliente.Size = new System.Drawing.Size(254, 20);
             this.txt_EmailCliente.TabIndex = 7;
             // 
+            // btn_Salvar
+            // 
+            this.btn_Salvar.Location = new System.Drawing.Point(65, 151);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Salvar.TabIndex = 8;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
+            // 
+            // dgv_Dados
+            // 
+            this.dgv_Dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Dados.Location = new System.Drawing.Point(16, 191);
+            this.dgv_Dados.Name = "dgv_Dados";
+            this.dgv_Dados.Size = new System.Drawing.Size(371, 158);
+            this.dgv_Dados.TabIndex = 9;
+            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 223);
+            this.ClientSize = new System.Drawing.Size(413, 393);
+            this.Controls.Add(this.dgv_Dados);
+            this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.txt_EmailCliente);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_TelefoneCliente);
@@ -120,6 +143,7 @@ namespace CadastroPessoaFisica
             this.Name = "FormCliente";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.FormCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Dados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +159,7 @@ namespace CadastroPessoaFisica
         private System.Windows.Forms.TextBox txt_TelefoneCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_EmailCliente;
+        private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.DataGridView dgv_Dados;
     }
 }
