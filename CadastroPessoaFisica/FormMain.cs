@@ -85,7 +85,7 @@ namespace CadastroPessoaFisica
         {
             var cliente = new Cliente();
 
-            cliente.Id = 1;
+            cliente.ID = "1";
             cliente.Nome = "José";
             cliente.Telefone = "45353535635";
             cliente.Email = "teste@teste.com";

@@ -37,6 +37,11 @@ namespace CadastroPessoaFisica
             this.txt_TelefoneCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_EmailCliente = new System.Windows.Forms.TextBox();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.dgv_Dados = new System.Windows.Forms.DataGridView();
+            this.btn_Editar = new System.Windows.Forms.Button();
+            this.btn_Remover = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Dados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -104,11 +109,53 @@ namespace CadastroPessoaFisica
             this.txt_EmailCliente.Size = new System.Drawing.Size(254, 20);
             this.txt_EmailCliente.TabIndex = 7;
             // 
+            // btn_Salvar
+            // 
+            this.btn_Salvar.Location = new System.Drawing.Point(244, 131);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Salvar.TabIndex = 8;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
+            // 
+            // dgv_Dados
+            // 
+            this.dgv_Dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Dados.Location = new System.Drawing.Point(16, 176);
+            this.dgv_Dados.Name = "dgv_Dados";
+            this.dgv_Dados.Size = new System.Drawing.Size(371, 158);
+            this.dgv_Dados.TabIndex = 9;
+            // 
+            // btn_Editar
+            // 
+            this.btn_Editar.Location = new System.Drawing.Point(222, 340);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Editar.TabIndex = 10;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
+            // 
+            // btn_Remover
+            // 
+            this.btn_Remover.Location = new System.Drawing.Point(312, 340);
+            this.btn_Remover.Name = "btn_Remover";
+            this.btn_Remover.Size = new System.Drawing.Size(75, 23);
+            this.btn_Remover.TabIndex = 11;
+            this.btn_Remover.Text = "Remover";
+            this.btn_Remover.UseVisualStyleBackColor = true;
+            this.btn_Remover.Click += new System.EventHandler(this.btn_Remover_Click);
+            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 223);
+            this.ClientSize = new System.Drawing.Size(413, 393);
+            this.Controls.Add(this.btn_Remover);
+            this.Controls.Add(this.btn_Editar);
+            this.Controls.Add(this.dgv_Dados);
+            this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.txt_EmailCliente);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_TelefoneCliente);
@@ -120,6 +167,7 @@ namespace CadastroPessoaFisica
             this.Name = "FormCliente";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.FormCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Dados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +183,9 @@ namespace CadastroPessoaFisica
         private System.Windows.Forms.TextBox txt_TelefoneCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_EmailCliente;
+        private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.DataGridView dgv_Dados;
+        private System.Windows.Forms.Button btn_Editar;
+        private System.Windows.Forms.Button btn_Remover;
     }
 }
