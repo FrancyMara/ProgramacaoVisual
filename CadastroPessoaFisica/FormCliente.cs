@@ -30,9 +30,10 @@ namespace CadastroPessoaFisica
         private void InstanciaDataTable()
         {
             Dados = new DataTable();
-            Dados.Columns.Add("nome");
-            Dados.Columns.Add("telefone");
-            Dados.Columns.Add("email");
+            Dados.Columns.Add("ID");
+            Dados.Columns.Add("Nome");
+            Dados.Columns.Add("Telefone");
+            Dados.Columns.Add("Email");
         }
 
         private void FormCliente_Load(object sender, EventArgs e)
@@ -54,6 +55,7 @@ namespace CadastroPessoaFisica
         }
         private void LimparTela()
         {
+            txt_IdCliente.Text = "";
             txt_NomeCliente.Text = "";
             txt_TelefoneCliente.Text = "";
             txt_EmailCliente.Text = "";
@@ -66,6 +68,7 @@ namespace CadastroPessoaFisica
             foreach (Cliente Item in ControladorCliente.Objetos)
             {
                 DataRow Row = Dados.NewRow();
+                Row["id"] = Item.ID;
                 Row["nome"] = Item.Nome;
                 Row["telefone"] = Item.Telefone;
                 Row["email"] = Item.Email;
@@ -79,6 +82,7 @@ namespace CadastroPessoaFisica
         {
             var c = new Cliente();
 
+            c.ID = txt_IdCliente.Text;
             c.Nome = txt_NomeCliente.Text;
             c.Telefone = txt_TelefoneCliente.Text;
             c.Email = txt_EmailCliente.Text;
@@ -89,6 +93,36 @@ namespace CadastroPessoaFisica
 
             LimparTela();
             AtualizarTela();
+        }
+
+        private void btn_Remover_Click(object sender, EventArgs e)
+        {
+            var Linha = dgv_Dados.SelectedRows[0];
+            DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
+
+            Cliente c = null;
+            foreach (Cliente cl in ControladorCliente.Objetos)
+            {
+                if (cl.ID.Equals(DataRow["Id"]) )
+                    c = cl;
+            }
+
+            ControladorCliente.Objetos.Remove(c);
+            AtualizarTela();
+        }
+
+        private void btn_Editar_Click(object sender, EventArgs e)
+        {
+            Editando = true;
+
+            var Linha = dgv_Dados.SelectedRows[0];
+            DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
+
+
+            txt_IdCliente.Text = DataRow["Id"].ToString();
+            txt_NomeCliente.Text = DataRow["nome"].ToString();
+            txt_TelefoneCliente.Text = DataRow["telefone"].ToString();
+            txt_EmailCliente.Text = DataRow["email"].ToString();
         }
     }
 }
