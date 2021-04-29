@@ -91,6 +91,15 @@ namespace CadastroPessoaFisica
             cliente.Email = "teste@teste.com";
 
             Clientes.Add(cliente);
+
+            var fornecedor = new Fornecedor();
+
+            fornecedor.ID = "1";
+            fornecedor.Nome = "Maria";
+            fornecedor.CNPJ = "123456789321";
+
+            Fornecedores.Add(fornecedor);
+
         }
 
         private void InicializarControladores()
