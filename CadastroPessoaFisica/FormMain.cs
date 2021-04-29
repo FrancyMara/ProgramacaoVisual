@@ -26,12 +26,14 @@ namespace CadastroPessoaFisica
         // CONTROLADORES        
         private ControladorFornecedor controladorFornecedor;
         private ControladorCliente controladorCliente;
+        private ControladorCategoria controladorCategoria;
+        private ControladorVendedor controladorVendedor;
 
         //TODO CRIAR
         //private ControladorProduto controladorProduto;
         //private ControladorCategoria controladorCategoria;
         //private ControladorPagamento controladorPagamento;
-        //private ControladorVendedor controladorVendedor;
+        //
 
 
         public FormMain()
@@ -54,11 +56,13 @@ namespace CadastroPessoaFisica
             ToolStripMenuItem menuItemCliente = new ToolStripMenuItem("CLIENTE", null, new EventHandler(MenuClienteClicado));
             ToolStripMenuItem menuItemVendedor = new ToolStripMenuItem("VENDEDOR", null, new EventHandler(MenuVendedorClicado));
             ToolStripMenuItem menuItemFornecedor = new ToolStripMenuItem("FORNECEDOR", null, new EventHandler(MenuFornecedorClicado));
+            ToolStripMenuItem menuItemCategoria = new ToolStripMenuItem("CATEGORIA PRODUTO", null, new EventHandler(MenuCategoriaClicado));
 
             // Adcição de filhos
             menuCadastros.DropDownItems.Add(menuItemCliente);
             menuCadastros.DropDownItems.Add(menuItemVendedor);
             menuCadastros.DropDownItems.Add(menuItemFornecedor);
+            menuCadastros.DropDownItems.Add(menuItemCategoria);
 
             ((ToolStripDropDownMenu)(menuCadastros.DropDown)).ShowImageMargin = false;
             ((ToolStripDropDownMenu)(menuCadastros.DropDown)).ShowCheckMargin = true;
@@ -91,12 +95,29 @@ namespace CadastroPessoaFisica
             cliente.Email = "teste@teste.com";
 
             Clientes.Add(cliente);
+
+            var fornecedor = new Fornecedor();
+
+            fornecedor.ID = "1";
+            fornecedor.Nome = "Maria";
+            fornecedor.CNPJ = "123456789321";
+
+            Fornecedores.Add(fornecedor);
+
+            var categoria = new Categoria();
+            categoria.ID = "1";
+            categoria.Nome = "Açougue";
+
+            Categorias.Add(categoria);
+
         }
 
         private void InicializarControladores()
         {            
             controladorFornecedor = new ControladorFornecedor(Fornecedores);
             controladorCliente = new ControladorCliente(Clientes);
+            controladorCategoria = new ControladorCategoria(Categorias);
+            controladorVendedor = new ControladorVendedor(Vendedores);
         }
 
         void MenuClienteClicado(object sender, EventArgs e)
@@ -109,7 +130,7 @@ namespace CadastroPessoaFisica
 
         void MenuVendedorClicado(object sender, EventArgs e)
         {
-            Form f = new Form();
+            Form f = new FormVendedor(controladorVendedor);
             f.MdiParent = this;
             f.Text = "Form - " + this.MdiChildren.Length.ToString();
             f.Show();
@@ -123,6 +144,13 @@ namespace CadastroPessoaFisica
             f.Show();
         }
 
+        private void MenuCategoriaClicado(object sender, EventArgs e)
+        {
+            Form f = new FormCategoria(controladorCategoria);
+            f.MdiParent = this;
+            f.Text = "Form - " + this.MdiChildren.Length.ToString();
+            f.Show();
+        }
         private void FormMain_Load(object sender, EventArgs e)
         {
 

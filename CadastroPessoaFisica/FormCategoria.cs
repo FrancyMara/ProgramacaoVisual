@@ -12,16 +12,19 @@ using Modelo.Entidades;
 
 namespace CadastroPessoaFisica
 {
-    public partial class FormFornecedor : Form
+    public partial class FormCategoria : Form
     {
-
-        private ControladorFornecedor ControladorFornecedor { get; set; }       
+        private ControladorCategoria ControladorCategoria { get; set; }
+        private List<object> Categoria = new List<object>();
         private bool Editando = false;
         private DataTable Dados;
-
-        public FormFornecedor(ControladorFornecedor controladorFornecedor)
+        public FormCategoria()
         {
-            ControladorFornecedor = controladorFornecedor;
+           
+        }
+        public FormCategoria(ControladorCategoria controladorCategoria)
+        {
+            ControladorCategoria = controladorCategoria;
 
             InitializeComponent();
             InstanciaDataTable();
@@ -33,25 +36,22 @@ namespace CadastroPessoaFisica
             Dados = new DataTable();
             Dados.Columns.Add("ID");
             Dados.Columns.Add("Nome");
-            Dados.Columns.Add("CNPJ");
         }
         private void LimparTela()
         {
-            txt_IdFornecedor.Text = "";
-            txt_NomeFornecedor.Text = "";
-            txt_CnpjFornecedor.Text = "";
+            txt_IdCategoria.Text = "";
+            txt_NomeCategoria.Text = "";
         }
 
         private void AtualizarTela()
         {
 
             Dados.Clear();
-            foreach (Fornecedor Item in ControladorFornecedor.Objetos)
+            foreach (Categoria Item in ControladorCategoria.Objetos)
             {
                 DataRow Row = Dados.NewRow();
                 Row["id"] = Item.ID;
                 Row["nome"] = Item.Nome;
-                Row["cnpj"] = Item.CNPJ;
                 Dados.Rows.Add(Row);
             }
 
@@ -59,37 +59,20 @@ namespace CadastroPessoaFisica
             dgv_Dados.Refresh();
         }
 
-        private void btn_Remover_Click(object sender, EventArgs e)
-        {
-            var Linha = dgv_Dados.SelectedRows[0];
-            DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
-
-            Fornecedor f = null;
-            foreach (Fornecedor frn in ControladorFornecedor.Objetos)
-            {
-                if (frn.ID.Equals(DataRow["Id"]))
-                    f = frn;
-            }
-
-            ControladorFornecedor.Objetos.Remove(f);
-            AtualizarTela();
-        }
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            var f = new Fornecedor();
+            var f = new Categoria();
 
-            f.ID = txt_IdFornecedor.Text;
-            f.Nome = txt_NomeFornecedor.Text;
-            f.CNPJ = txt_CnpjFornecedor.Text;
+            f.ID = txt_IdCategoria.Text;
+            f.Nome = txt_NomeCategoria.Text;
 
-            ControladorFornecedor.Salvar(f, Editando);
+            ControladorCategoria.Salvar(f, Editando);
 
             Editando = false;
 
             LimparTela();
             AtualizarTela();
-
         }
 
         private void btn_Editar_Click(object sender, EventArgs e)
@@ -100,10 +83,24 @@ namespace CadastroPessoaFisica
             DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
 
 
-            txt_IdFornecedor.Text = DataRow["Id"].ToString();
-            txt_NomeFornecedor.Text = DataRow["nome"].ToString();
-            txt_CnpjFornecedor.Text = DataRow["cnpj"].ToString();
+            txt_IdCategoria.Text = DataRow["Id"].ToString();
+            txt_NomeCategoria.Text = DataRow["nome"].ToString();
+        }
 
+        private void btn_Remover_Click(object sender, EventArgs e)
+        {
+            var Linha = dgv_Dados.SelectedRows[0];
+            DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
+
+            Categoria c = null;
+            foreach (Categoria ctg in ControladorCategoria.Objetos)
+            {
+                if (ctg.ID.Equals(DataRow["Id"]))
+                    c = ctg;
+            }
+
+            ControladorCategoria.Objetos.Remove(c);
+            AtualizarTela();
         }
     }
 }

@@ -64,7 +64,18 @@ namespace Controller.Funcoes
 
         public bool Salvar(Fornecedor fornecedor, bool Editando)
         {
-            Objetos.Add(fornecedor);
+            if (fornecedor == null)
+                return false;
+
+            if (Editando)
+                for (int i = 0; i < Objetos.Count; i++)
+                {
+                    if (Objetos[i].Equals(fornecedor))
+                        Objetos[i] = fornecedor;
+                }
+            else
+                Objetos.Add(fornecedor);
+
             return true;
         }
     }
