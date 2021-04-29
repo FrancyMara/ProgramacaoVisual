@@ -27,12 +27,13 @@ namespace CadastroPessoaFisica
         private ControladorFornecedor controladorFornecedor;
         private ControladorCliente controladorCliente;
         private ControladorCategoria controladorCategoria;
+        private ControladorVendedor controladorVendedor;
 
         //TODO CRIAR
         //private ControladorProduto controladorProduto;
         //private ControladorCategoria controladorCategoria;
         //private ControladorPagamento controladorPagamento;
-        //private ControladorVendedor controladorVendedor;
+        //
 
 
         public FormMain()
@@ -116,6 +117,7 @@ namespace CadastroPessoaFisica
             controladorFornecedor = new ControladorFornecedor(Fornecedores);
             controladorCliente = new ControladorCliente(Clientes);
             controladorCategoria = new ControladorCategoria(Categorias);
+            controladorVendedor = new ControladorVendedor(Vendedores);
         }
 
         void MenuClienteClicado(object sender, EventArgs e)
@@ -128,7 +130,7 @@ namespace CadastroPessoaFisica
 
         void MenuVendedorClicado(object sender, EventArgs e)
         {
-            Form f = new Form();
+            Form f = new FormVendedor(controladorVendedor);
             f.MdiParent = this;
             f.Text = "Form - " + this.MdiChildren.Length.ToString();
             f.Show();

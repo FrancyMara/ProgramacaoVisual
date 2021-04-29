@@ -15,8 +15,7 @@ namespace CadastroPessoaFisica
     public partial class FormFornecedor : Form
     {
 
-        private ControladorFornecedor ControladorFornecedor { get; set; }
-        private List<object> Fornecedor = new List<object>();
+        private ControladorFornecedor ControladorFornecedor { get; set; }       
         private bool Editando = false;
         private DataTable Dados;
 

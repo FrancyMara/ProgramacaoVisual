@@ -9,3 +9,8 @@ C:\Users\carla\Source\Repos\ProgramacaoVisual\Modelo\obj\Debug\Modelo.csprojAsse
 C:\Users\carla\Source\Repos\ProgramacaoVisual\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\carla\Source\Repos\ProgramacaoVisual\Modelo\obj\Debug\Modelo.dll
 C:\Users\carla\Source\Repos\ProgramacaoVisual\Modelo\obj\Debug\Modelo.pdb
+C:\Projetos\ProgVisual2021\Modelo\bin\Debug\Modelo.dll
+C:\Projetos\ProgVisual2021\Modelo\bin\Debug\Modelo.pdb
+C:\Projetos\ProgVisual2021\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Projetos\ProgVisual2021\Modelo\obj\Debug\Modelo.dll
+C:\Projetos\ProgVisual2021\Modelo\obj\Debug\Modelo.pdb

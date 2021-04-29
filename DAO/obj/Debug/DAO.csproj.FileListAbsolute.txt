@@ -9,3 +9,9 @@ C:\Users\carla\Source\Repos\ProgramacaoVisual\DAO\obj\Debug\DAO.csprojAssemblyRe
 C:\Users\carla\Source\Repos\ProgramacaoVisual\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\carla\Source\Repos\ProgramacaoVisual\DAO\obj\Debug\DAO.dll
 C:\Users\carla\Source\Repos\ProgramacaoVisual\DAO\obj\Debug\DAO.pdb
+C:\Projetos\ProgVisual2021\DAO\bin\Debug\DAO.dll
+C:\Projetos\ProgVisual2021\DAO\bin\Debug\DAO.pdb
+C:\Projetos\ProgVisual2021\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Projetos\ProgVisual2021\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Projetos\ProgVisual2021\DAO\obj\Debug\DAO.dll
+C:\Projetos\ProgVisual2021\DAO\obj\Debug\DAO.pdb

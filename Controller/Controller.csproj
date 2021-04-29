@@ -44,9 +44,11 @@
     <Compile Include="Funcoes\ControladorCategoria.cs" />
     <Compile Include="Funcoes\ControladorCliente.cs" />
     <Compile Include="Funcoes\ControladorFornecedor.cs" />
+    <Compile Include="Funcoes\ControladorVendedor.cs" />
     <Compile Include="Interfaces\IControllerCategoria.cs" />
     <Compile Include="Interfaces\IControllerCliente.cs" />
     <Compile Include="Interfaces\IControllerFornecedor.cs" />
+    <Compile Include="Interfaces\IControllerVendedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
