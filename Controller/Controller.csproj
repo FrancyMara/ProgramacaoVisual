@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Funcoes\ControladorCategoria.cs" />
     <Compile Include="Funcoes\ControladorCliente.cs" />
     <Compile Include="Funcoes\ControladorFornecedor.cs" />
+    <Compile Include="Interfaces\IControllerCategoria.cs" />
     <Compile Include="Interfaces\IControllerCliente.cs" />
     <Compile Include="Interfaces\IControllerFornecedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
