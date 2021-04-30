@@ -102,5 +102,10 @@ namespace CadastroPessoaFisica
             ControladorCategoria.Objetos.Remove(c);
             AtualizarTela();
         }
+
+        private void FormCategoria_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,8 +31,7 @@ namespace CadastroPessoaFisica
 
         //TODO CRIAR
         //private ControladorProduto controladorProduto;
-        //private ControladorCategoria controladorCategoria;
-        //private ControladorPagamento controladorPagamento;
+       //private ControladorPagamento controladorPagamento;
         //
 
 

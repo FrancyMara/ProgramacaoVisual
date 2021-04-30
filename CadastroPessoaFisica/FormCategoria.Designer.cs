@@ -125,6 +125,7 @@ namespace CadastroPessoaFisica
             this.Controls.Add(this.label1);
             this.Name = "FormCategoria";
             this.Text = "Categoria";
+            this.Load += new System.EventHandler(this.FormCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Dados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
