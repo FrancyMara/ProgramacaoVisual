@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\Controller",
+    "\\Controller\\Funcoes",
     "\\Controller\\Interfaces",
     "\\Controller\\Properties",
     "\\Modelo",
