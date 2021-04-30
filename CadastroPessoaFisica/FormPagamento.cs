@@ -12,67 +12,83 @@ using Modelo.Entidades;
 
 namespace CadastroPessoaFisica
 {
-    public partial class FormCategoria : Form
+    public partial class FormPagamento : Form
     {
-        private ControladorCategoria ControladorCategoria { get; set; }
-        private List<object> Categoria = new List<object>();
+        private ControladorPagamento ControladorPagamento { get; set; }
         private bool Editando = false;
         private DataTable Dados;
-        public FormCategoria()
+        
+
+        public FormPagamento(ControladorPagamento controladorPagamento)
         {
-           
-        }
-        public FormCategoria(ControladorCategoria controladorCategoria)
-        {
-            ControladorCategoria = controladorCategoria;
+            ControladorPagamento = controladorPagamento;
 
             InitializeComponent();
             InstanciaDataTable();
             LimparTela();
             AtualizarTela();
         }
+
         private void InstanciaDataTable()
         {
             Dados = new DataTable();
             Dados.Columns.Add("ID");
-            Dados.Columns.Add("Nome");
+            Dados.Columns.Add("FormaPagamento");
+
         }
         private void LimparTela()
         {
-            txt_IdCategoria.Text = "";
-            txt_NomeCategoria.Text = "";
+            txt_IdPagamento.Text = "";
+            txt_FormaPagamento.Text = ""; 
         }
 
         private void AtualizarTela()
         {
-
             Dados.Clear();
-            foreach (Categoria Item in ControladorCategoria.Objetos)
+            foreach (Pagamento Item in ControladorPagamento.Objetos)
             {
                 DataRow Row = Dados.NewRow();
                 Row["id"] = Item.ID;
-                Row["nome"] = Item.Nome;
+                Row["FormaPagamento"] = Item.FormaPagamento;
                 Dados.Rows.Add(Row);
             }
 
             dgv_Dados.DataSource = Dados;
             dgv_Dados.Refresh();
+
         }
 
+        private void btn_Remover_Click(object sender, EventArgs e)
+        {
+            var Linha = dgv_Dados.SelectedRows[0];
+            DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
+
+            Pagamento p = null;
+            foreach (Pagamento pag in ControladorPagamento.Objetos)
+            {
+                if (pag.ID.Equals(DataRow["Id"]))
+                    p = pag;
+            }
+
+            ControladorPagamento.Objetos.Remove(p);
+            AtualizarTela();
+        }
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            var f = new Categoria();
+            var p = new Pagamento();
 
-            f.ID = txt_IdCategoria.Text;
-            f.Nome = txt_NomeCategoria.Text;
+            p.ID = txt_IdPagamento.Text;
+            p.FormaPagamento = txt_FormaPagamento.Text;
+           
 
-            ControladorCategoria.Salvar(f, Editando);
+            ControladorPagamento.Salvar(p, Editando);
 
             Editando = false;
 
             LimparTela();
             AtualizarTela();
+
         }
 
         private void btn_Editar_Click(object sender, EventArgs e)
@@ -83,27 +99,13 @@ namespace CadastroPessoaFisica
             DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
 
 
-            txt_IdCategoria.Text = DataRow["Id"].ToString();
-            txt_NomeCategoria.Text = DataRow["nome"].ToString();
+            txt_IdPagamento.Text = DataRow["Id"].ToString();
+            txt_FormaPagamento.Text = DataRow["FormaPagamento"].ToString();
+            
+
         }
 
-        private void btn_Remover_Click(object sender, EventArgs e)
-        {
-            var Linha = dgv_Dados.SelectedRows[0];
-            DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
-
-            Categoria c = null;
-            foreach (Categoria ctg in ControladorCategoria.Objetos)
-            {
-                if (ctg.ID.Equals(DataRow["Id"]))
-                    c = ctg;
-            }
-
-            ControladorCategoria.Objetos.Remove(c);
-            AtualizarTela();
-        }
-
-        private void FormCategoria_Load(object sender, EventArgs e)
+        private void FormPagamento_Load(object sender, EventArgs e)
         {
 
         }

@@ -55,13 +55,13 @@ namespace CadastroPessoaFisica
                 Dados.Rows.Add(Row);
             }
 
-            dgv_Dados.DataSource = Dados;
-            dgv_Dados.Refresh();
+            c.DataSource = Dados;
+            c.Refresh();
         }
 
         private void btn_Remover_Click(object sender, EventArgs e)
         {
-            var Linha = dgv_Dados.SelectedRows[0];
+            var Linha = c.SelectedRows[0];
             DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
 
             Fornecedor f = null;
@@ -96,13 +96,18 @@ namespace CadastroPessoaFisica
         {
             Editando = true;
 
-            var Linha = dgv_Dados.SelectedRows[0];
+            var Linha = c.SelectedRows[0];
             DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
 
 
             txt_IdFornecedor.Text = DataRow["Id"].ToString();
             txt_NomeFornecedor.Text = DataRow["nome"].ToString();
             txt_CnpjFornecedor.Text = DataRow["cnpj"].ToString();
+
+        }
+
+        private void FormFornecedor_Load(object sender, EventArgs e)
+        {
 
         }
     }

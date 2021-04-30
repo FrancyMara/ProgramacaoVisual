@@ -38,8 +38,8 @@ namespace CadastroPessoaFisica
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.btn_Remover = new System.Windows.Forms.Button();
-            this.dgv_Dados = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Dados)).BeginInit();
+            this.c = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.c)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -120,20 +120,20 @@ namespace CadastroPessoaFisica
             this.btn_Remover.UseVisualStyleBackColor = true;
             this.btn_Remover.Click += new System.EventHandler(this.btn_Remover_Click);
             // 
-            // dgv_Dados
+            // c
             // 
-            this.dgv_Dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Dados.Location = new System.Drawing.Point(50, 166);
-            this.dgv_Dados.Name = "dgv_Dados";
-            this.dgv_Dados.Size = new System.Drawing.Size(377, 148);
-            this.dgv_Dados.TabIndex = 9;
+            this.c.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.c.Location = new System.Drawing.Point(50, 166);
+            this.c.Name = "c";
+            this.c.Size = new System.Drawing.Size(377, 148);
+            this.c.TabIndex = 9;
             // 
             // FormFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 388);
-            this.Controls.Add(this.dgv_Dados);
+            this.Controls.Add(this.c);
             this.Controls.Add(this.btn_Remover);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Salvar);
@@ -145,7 +145,8 @@ namespace CadastroPessoaFisica
             this.Controls.Add(this.label1);
             this.Name = "FormFornecedor";
             this.Text = "Fornecedor";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Dados)).EndInit();
+            this.Load += new System.EventHandler(this.FormFornecedor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.c)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,6 +163,6 @@ namespace CadastroPessoaFisica
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.Button btn_Remover;
-        private System.Windows.Forms.DataGridView dgv_Dados;
+        private System.Windows.Forms.DataGridView c;
     }
 }
