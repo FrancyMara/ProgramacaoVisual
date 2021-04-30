@@ -28,11 +28,12 @@ namespace CadastroPessoaFisica
         private ControladorCliente controladorCliente;
         private ControladorCategoria controladorCategoria;
         private ControladorVendedor controladorVendedor;
+        private ControladorPagamento controladorPagamento;
+        private ControladorProduto controladorProduto;
 
         //TODO CRIAR
         //private ControladorProduto controladorProduto;
-       //private ControladorPagamento controladorPagamento;
-        //
+
 
 
         public FormMain()
@@ -56,12 +57,16 @@ namespace CadastroPessoaFisica
             ToolStripMenuItem menuItemVendedor = new ToolStripMenuItem("VENDEDOR", null, new EventHandler(MenuVendedorClicado));
             ToolStripMenuItem menuItemFornecedor = new ToolStripMenuItem("FORNECEDOR", null, new EventHandler(MenuFornecedorClicado));
             ToolStripMenuItem menuItemCategoria = new ToolStripMenuItem("CATEGORIA PRODUTO", null, new EventHandler(MenuCategoriaClicado));
+            ToolStripMenuItem menuItemPagamento = new ToolStripMenuItem("PAGAMENTO", null, new EventHandler(MenuPagamentoClicado));
+            ToolStripMenuItem menuItemProduto = new ToolStripMenuItem("PRODUTO", null, new EventHandler(MenuProdutoClicado));
 
             // Adcição de filhos
             menuCadastros.DropDownItems.Add(menuItemCliente);
             menuCadastros.DropDownItems.Add(menuItemVendedor);
             menuCadastros.DropDownItems.Add(menuItemFornecedor);
-            menuCadastros.DropDownItems.Add(menuItemCategoria);
+            menuCadastros.DropDownItems.Add(menuItemCategoria); 
+            menuCadastros.DropDownItems.Add(menuItemPagamento);
+            menuCadastros.DropDownItems.Add(menuItemProduto);
 
             ((ToolStripDropDownMenu)(menuCadastros.DropDown)).ShowImageMargin = false;
             ((ToolStripDropDownMenu)(menuCadastros.DropDown)).ShowCheckMargin = true;
@@ -117,13 +122,15 @@ namespace CadastroPessoaFisica
             controladorCliente = new ControladorCliente(Clientes);
             controladorCategoria = new ControladorCategoria(Categorias);
             controladorVendedor = new ControladorVendedor(Vendedores);
+            controladorPagamento = new ControladorPagamento(Pagamentos);
+            controladorProduto = new ControladorProduto(Produtos);
         }
 
         void MenuClienteClicado(object sender, EventArgs e)
         {
             Form f = new FormCliente(controladorCliente);
             f.MdiParent = this;
-            f.Text = "Form - " + this.MdiChildren.Length.ToString();
+            f.Text = "CLIENTE";
             f.Show();
         }
 
@@ -131,7 +138,7 @@ namespace CadastroPessoaFisica
         {
             Form f = new FormVendedor(controladorVendedor);
             f.MdiParent = this;
-            f.Text = "Form - " + this.MdiChildren.Length.ToString();
+            f.Text = "VENDEDOR";
             f.Show();
         }
 
@@ -139,7 +146,7 @@ namespace CadastroPessoaFisica
         {
             Form f = new FormFornecedor(controladorFornecedor);
             f.MdiParent = this;
-            f.Text = "Form - " + this.MdiChildren.Length.ToString();
+            f.Text = "FORNECEDOR";
             f.Show();
         }
 
@@ -147,9 +154,29 @@ namespace CadastroPessoaFisica
         {
             Form f = new FormCategoria(controladorCategoria);
             f.MdiParent = this;
-            f.Text = "Form - " + this.MdiChildren.Length.ToString();
+            f.Text = "CATEGORIA";
             f.Show();
         }
+
+        private void MenuPagamentoClicado(object sender, EventArgs e)
+
+        {
+            Form f = new FormPagamento(controladorPagamento);
+        f.MdiParent = this;
+            f.Text = "PAGAMENTO";
+            f.Show();
+        }
+
+
+        private void MenuProdutoClicado(object sender, EventArgs e)
+
+        {
+            Form f = new FormProduto(controladorProduto);
+            f.MdiParent = this;
+            f.Text = "PRODUTO";
+            f.Show();
+        }
+
         private void FormMain_Load(object sender, EventArgs e)
         {
 

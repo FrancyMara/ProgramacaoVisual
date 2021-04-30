@@ -12,78 +12,77 @@ using Modelo.Entidades;
 
 namespace CadastroPessoaFisica
 {
-    public partial class FormFornecedor : Form
+    public partial class FormPagamento : Form
     {
-
-        private ControladorFornecedor ControladorFornecedor { get; set; }       
+        private ControladorPagamento ControladorPagamento { get; set; }
         private bool Editando = false;
         private DataTable Dados;
+        
 
-        public FormFornecedor(ControladorFornecedor controladorFornecedor)
+        public FormPagamento(ControladorPagamento controladorPagamento)
         {
-            ControladorFornecedor = controladorFornecedor;
+            ControladorPagamento = controladorPagamento;
 
             InitializeComponent();
             InstanciaDataTable();
             LimparTela();
             AtualizarTela();
         }
+
         private void InstanciaDataTable()
         {
             Dados = new DataTable();
             Dados.Columns.Add("ID");
-            Dados.Columns.Add("Nome");
-            Dados.Columns.Add("CNPJ");
+            Dados.Columns.Add("FormaPagamento");
+
         }
         private void LimparTela()
         {
-            txt_IdFornecedor.Text = "";
-            txt_NomeFornecedor.Text = "";
-            txt_CnpjFornecedor.Text = "";
+            txt_IdPagamento.Text = "";
+            txt_FormaPagamento.Text = ""; 
         }
 
         private void AtualizarTela()
         {
-
             Dados.Clear();
-            foreach (Fornecedor Item in ControladorFornecedor.Objetos)
+            foreach (Pagamento Item in ControladorPagamento.Objetos)
             {
                 DataRow Row = Dados.NewRow();
                 Row["id"] = Item.ID;
-                Row["nome"] = Item.Nome;
-                Row["cnpj"] = Item.CNPJ;
+                Row["FormaPagamento"] = Item.FormaPagamento;
                 Dados.Rows.Add(Row);
             }
 
-            c.DataSource = Dados;
-            c.Refresh();
+            dgv_Dados.DataSource = Dados;
+            dgv_Dados.Refresh();
+
         }
 
         private void btn_Remover_Click(object sender, EventArgs e)
         {
-            var Linha = c.SelectedRows[0];
+            var Linha = dgv_Dados.SelectedRows[0];
             DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
 
-            Fornecedor f = null;
-            foreach (Fornecedor frn in ControladorFornecedor.Objetos)
+            Pagamento p = null;
+            foreach (Pagamento pag in ControladorPagamento.Objetos)
             {
-                if (frn.ID.Equals(DataRow["Id"]))
-                    f = frn;
+                if (pag.ID.Equals(DataRow["Id"]))
+                    p = pag;
             }
 
-            ControladorFornecedor.Objetos.Remove(f);
+            ControladorPagamento.Objetos.Remove(p);
             AtualizarTela();
         }
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            var f = new Fornecedor();
+            var p = new Pagamento();
 
-            f.ID = txt_IdFornecedor.Text;
-            f.Nome = txt_NomeFornecedor.Text;
-            f.CNPJ = txt_CnpjFornecedor.Text;
+            p.ID = txt_IdPagamento.Text;
+            p.FormaPagamento = txt_FormaPagamento.Text;
+           
 
-            ControladorFornecedor.Salvar(f, Editando);
+            ControladorPagamento.Salvar(p, Editando);
 
             Editando = false;
 
@@ -96,17 +95,17 @@ namespace CadastroPessoaFisica
         {
             Editando = true;
 
-            var Linha = c.SelectedRows[0];
+            var Linha = dgv_Dados.SelectedRows[0];
             DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
 
 
-            txt_IdFornecedor.Text = DataRow["Id"].ToString();
-            txt_NomeFornecedor.Text = DataRow["nome"].ToString();
-            txt_CnpjFornecedor.Text = DataRow["cnpj"].ToString();
+            txt_IdPagamento.Text = DataRow["Id"].ToString();
+            txt_FormaPagamento.Text = DataRow["FormaPagamento"].ToString();
+            
 
         }
 
-        private void FormFornecedor_Load(object sender, EventArgs e)
+        private void FormPagamento_Load(object sender, EventArgs e)
         {
 
         }
