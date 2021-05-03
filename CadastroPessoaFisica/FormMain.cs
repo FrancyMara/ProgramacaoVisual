@@ -21,6 +21,7 @@ namespace CadastroPessoaFisica
         private List<object> Categorias = new List<object>();
         private List<object> Pagamentos = new List<object>();
         private List<object> Vendedores = new List<object>();
+        private List<object> Venda = new List<object>();
 
 
         // CONTROLADORES        
@@ -30,10 +31,9 @@ namespace CadastroPessoaFisica
         private ControladorVendedor controladorVendedor;
         private ControladorPagamento controladorPagamento;
         private ControladorProduto controladorProduto;
+        private ControladorVenda controladorVenda;
 
-        //TODO CRIAR
-        //private ControladorProduto controladorProduto;
-
+       
 
 
         public FormMain()
@@ -51,6 +51,7 @@ namespace CadastroPessoaFisica
 
             // Menu Pai
             ToolStripMenuItem menuCadastros = new ToolStripMenuItem("CADASTRO");
+            ToolStripMenuItem menuVenda = new ToolStripMenuItem("VENDA");
 
             // Menus Filhos
             ToolStripMenuItem menuItemCliente = new ToolStripMenuItem("CLIENTE", null, new EventHandler(MenuClienteClicado));
@@ -171,7 +172,7 @@ namespace CadastroPessoaFisica
         private void MenuProdutoClicado(object sender, EventArgs e)
 
         {
-            Form f = new FormProduto(controladorProduto);
+            Form f = new FormProduto(controladorProduto, controladorCategoria, controladorFornecedor);
             f.MdiParent = this;
             f.Text = "PRODUTO";
             f.Show();
