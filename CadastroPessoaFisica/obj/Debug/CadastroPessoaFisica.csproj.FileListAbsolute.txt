@@ -54,7 +54,5 @@ C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csproj.CoreCompil
 C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.csproj.CopyComplete
 C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.exe
 C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.pdb
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormCategoria.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormVendedor.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormPagamento.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormProduto.resources
+C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormCategoria.resources
+C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormVendedor.resources
