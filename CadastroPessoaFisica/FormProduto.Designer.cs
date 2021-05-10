@@ -210,6 +210,7 @@ namespace CadastroPessoaFisica
             this.Controls.Add(this.label1);
             this.Name = "FormProduto";
             this.Text = "Cadastro de Produto";
+            this.Load += new System.EventHandler(this.FormProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Dados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

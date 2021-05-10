@@ -17,32 +17,71 @@ namespace CadastroPessoaFisica
 
         private ControladorProduto ControladorProduto { get; set; }
         private ControladorVenda ControladorVenda { get; set; }
+        private ControladorCliente ControladorCliente { get; set; }
 
         private Venda NovaVenda;
 
-        public FormVenda(ControladorProduto controladorProdutos, ControladorVenda controladorVenda)
+        private DataTable Dados;
+
+
+        public FormVenda(ControladorProduto controladorProdutos, ControladorVenda controladorVenda, ControladorCliente controladorCliente)
         {
 
             ControladorProduto = controladorProdutos;
             ControladorVenda = controladorVenda;
+            ControladorCliente = controladorCliente;
 
             NovaVenda = new Venda();
 
             InitializeComponent();
+            InstanciaDataTable();
+            AtualizarTela();
+            CarregarListas();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void CarregarListas()
         {
+            var bindingClientes = new BindingSource();
+            bindingClientes.DataSource = ControladorCliente.Objetos;
+
+            combo_Cliente.DataSource = bindingClientes.DataSource;
+            combo_Cliente.DisplayMember = "Nome";
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
+        private void InstanciaDataTable()
+        {
+            Dados = new DataTable();
+            Dados.Columns.Add("ID");
+            Dados.Columns.Add("Nome");
+
+        }
+
+        private void AtualizarTela()
+        {
+            Dados.Clear();
+            foreach (ItemVenda Item in NovaVenda.Itens)
+            {
+                DataRow Row = Dados.NewRow();
+                Row["Id"] = Item.ID;
+                Row["Nome"] = Item.Prod.Nome;
+                Dados.Rows.Add(Row);
+            }
+
+            dgv_ItensVenda.DataSource = Dados;
+            dgv_ItensVenda.Refresh();
+
+            // Somar totais
+            lbl_TotalVenda.Text = NovaVenda.Itens.Sum(it => (it.Prod.Preco* it.Quantidade)).ToString();
         }
 
         private void btn_AdicionarProdutoVenda(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(txt_CodigoBarras.Text)) return;
+
             var codigoBarras = int.Parse(txt_CodigoBarras.Text);
 
             var produtoAdicionar = ControladorProduto.Objetos
@@ -69,7 +108,28 @@ namespace CadastroPessoaFisica
                 };
 
                 NovaVenda.Itens.Add(novoItem);
+
+                // Limpa o campo código de barras
+                txt_CodigoBarras.Text = string.Empty;
+
+                AtualizarTela();
             }
+
         }
+
+        private void btn_SalvarVenda_Click(object sender, EventArgs e)
+        {
+            if (!NovaVenda.Itens.Any())
+            {
+                MessageBox.Show("Adicione itens na venda seu cabaço");
+                return;
+            }
+                
+
+            ControladorVenda.Objetos.Add(NovaVenda);
+            MessageBox.Show("FALOU VALEU");
+            this.Close();
+        }
+
     }
 }

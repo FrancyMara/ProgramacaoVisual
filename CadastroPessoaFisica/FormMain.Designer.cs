@@ -42,7 +42,6 @@ namespace CadastroPessoaFisica
             this.DoubleBuffered = true;
             this.Name = "FormMain";
             this.Text = "VENDA MAIS+";
-            this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
 
         }

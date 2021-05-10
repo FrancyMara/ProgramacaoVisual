@@ -21,7 +21,7 @@ namespace CadastroPessoaFisica
         private List<object> Categorias = new List<object>();
         private List<object> Pagamentos = new List<object>();
         private List<object> Vendedores = new List<object>();
-        private List<object> Venda = new List<object>();
+        private List<object> Vendas = new List<object>();
 
 
         // CONTROLADORES        
@@ -34,8 +34,6 @@ namespace CadastroPessoaFisica
         private ControladorVenda controladorVenda;
 
        
-
-
         public FormMain()
         {
             this.IsMdiContainer = true;
@@ -61,6 +59,8 @@ namespace CadastroPessoaFisica
             ToolStripMenuItem menuItemPagamento = new ToolStripMenuItem("PAGAMENTO", null, new EventHandler(MenuPagamentoClicado));
             ToolStripMenuItem menuItemProduto = new ToolStripMenuItem("PRODUTO", null, new EventHandler(MenuProdutoClicado));
 
+            ToolStripMenuItem menuItemVenda = new ToolStripMenuItem("VENDA", null, new EventHandler(MenuVendaClicado));
+
             // Adcição de filhos
             menuCadastros.DropDownItems.Add(menuItemCliente);
             menuCadastros.DropDownItems.Add(menuItemVendedor);
@@ -72,12 +72,18 @@ namespace CadastroPessoaFisica
             ((ToolStripDropDownMenu)(menuCadastros.DropDown)).ShowImageMargin = false;
             ((ToolStripDropDownMenu)(menuCadastros.DropDown)).ShowCheckMargin = true;
 
+            menuVenda.DropDownItems.Add(menuItemVenda);
+
+            ((ToolStripDropDownMenu)(menuVenda.DropDown)).ShowImageMargin = false;
+            ((ToolStripDropDownMenu)(menuVenda.DropDown)).ShowCheckMargin = true;
+
             // Assign the ToolStripMenuItem that displays 
             // the list of child forms.
             ms.MdiWindowListItem = menuCadastros;
 
             // Add the window ToolStripMenuItem to the MenuStrip.
             ms.Items.Add(menuCadastros);
+            ms.Items.Add(menuVenda);
 
 
             // Dock the MenuStrip to the top of the form.
@@ -89,6 +95,8 @@ namespace CadastroPessoaFisica
             this.Controls.Add(ms);
 
         }
+
+        
 
         private void InicializarListas()
         {
@@ -115,6 +123,17 @@ namespace CadastroPessoaFisica
 
             Categorias.Add(categoria);
 
+            var produto = new Produto()
+            {
+                Id = 1,
+                Nome = "Chinelo de dedo",
+                Preco = 25,
+                Categoria = Categorias.FirstOrDefault() as Categoria,
+                Fornecedor = Fornecedores.FirstOrDefault() as Fornecedor,
+                QuantidadeEstoque = 20
+            };
+
+            Produtos.Add(produto);
         }
 
         private void InicializarControladores()
@@ -125,6 +144,7 @@ namespace CadastroPessoaFisica
             controladorVendedor = new ControladorVendedor(Vendedores);
             controladorPagamento = new ControladorPagamento(Pagamentos);
             controladorProduto = new ControladorProduto(Produtos);
+            controladorVenda = new ControladorVenda(Vendas);
         }
 
         void MenuClienteClicado(object sender, EventArgs e)
@@ -178,9 +198,12 @@ namespace CadastroPessoaFisica
             f.Show();
         }
 
-        private void FormMain_Load(object sender, EventArgs e)
+        private void MenuVendaClicado(object sender, EventArgs e)
         {
-
+            Form f = new FormVenda(controladorProduto, controladorVenda, controladorCliente);
+            f.MdiParent = this;
+            f.Text = "VENDA";
+            f.Show();
         }
     }
 }
