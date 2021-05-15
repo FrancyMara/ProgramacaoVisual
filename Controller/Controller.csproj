@@ -46,6 +46,7 @@
     <Compile Include="Funcoes\ControladorFornecedor.cs" />
     <Compile Include="Funcoes\ControladorPagamento.cs" />
     <Compile Include="Funcoes\ControladorProduto.cs" />
+    <Compile Include="Funcoes\ControladorVenda.cs" />
     <Compile Include="Funcoes\ControladorVendedor.cs" />
     <Compile Include="Interfaces\IControllerPagamento.cs" />
     <Compile Include="Interfaces\IControllerCategoria.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Interfaces\IControllerFornecedor.cs" />
     <Compile Include="Interfaces\IControllerProduto.cs" />
     <Compile Include="Interfaces\IControllerVendedor.cs" />
+    <Compile Include="Interfaces\IControllerVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

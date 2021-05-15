@@ -9,6 +9,11 @@ namespace Modelo.Entidades
     public class Venda: ClasseBase
     {
 
+        public Venda()
+        {
+            Itens = new List<ItemVenda>();
+        }
+
         public decimal ValorTotal { get; set; }
         public DateTime Data { get; set; }
         
