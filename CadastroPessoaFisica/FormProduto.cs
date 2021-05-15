@@ -43,7 +43,7 @@ namespace CadastroPessoaFisica
 
         private void LimparTela()
         {
-            txt_IDProduto.Text = "";
+            txt_ID.Text = "";
             txt_NomeProduto.Text = "";
             txt_ValorProduto.Text = "";
             txt_EstoqueProduto.Text = "";
@@ -60,8 +60,8 @@ namespace CadastroPessoaFisica
                 DataRow Row = Dados.NewRow();
                 Row["id"] = Item.ID;
                 Row["nome"] = Item.Nome;
-                Row["valor"] = Item.Valor;
-                Row["estoque"] = Item.Estoque;
+                Row["valor"] = Item.Preco;
+                Row["estoque"] = Item.QuantidadeEstoque;
                 Row["categoria"] = Item.Categoria;
                 Row["fornecedor"] = Item.Fornecedor;
 
@@ -80,7 +80,7 @@ namespace CadastroPessoaFisica
             Produto p = null;
             foreach (Produto prod in ControladorProduto.Objetos)
             {
-                if (prod.Id.Equals(DataRow["Id"]))
+                if (prod.ID.Equals(DataRow["Id"]))
                     p = prod;
             }
 
@@ -92,12 +92,17 @@ namespace CadastroPessoaFisica
         {
             var prod = new Produto();
 
-            prod.Id = txt_IDProduto.Text;
+            prod.ID = txt_ID.Text;
             prod.Nome = txt_NomeProduto.Text;
             prod.Preco = txt_ValorProduto.Text;
             prod.QuantidadeEstoque = txt_EstoqueProduto.Text;
             prod.Categoria = txt_CategoriaProduto.Text;
-            prod.Fornecedor = txt_FornecedorProduto.Text;
+           prod.Fornecedor = txt_FornecedorProduto.Text;
+
+            int ValorInteiro = Convert.ToInt32(txt_ValorProduto.Text);
+            decimal ValorDec = Convert.ToDecimal();
+
+
             
 
 
@@ -119,7 +124,7 @@ namespace CadastroPessoaFisica
             DataRow DataRow = (Linha.DataBoundItem as DataRowView).Row;
 
 
-            txt_IDProduto.Text = DataRow["Id"].ToString();
+            txt_ID.Text = DataRow["Id"].ToString();
             txt_NomeProduto.Text = DataRow["Nome"].ToString();
             txt_ValorProduto.Text = DataRow["Preco"].ToString();
             txt_EstoqueProduto.Text = DataRow["Estoque"].ToString();
@@ -129,7 +134,9 @@ namespace CadastroPessoaFisica
 
         }
 
+        private void FormProduto_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
