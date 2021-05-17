@@ -14,3 +14,9 @@ C:\Projetos\ProgVisual2021\Modelo\bin\Debug\Modelo.pdb
 C:\Projetos\ProgVisual2021\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Projetos\ProgVisual2021\Modelo\obj\Debug\Modelo.dll
 C:\Projetos\ProgVisual2021\Modelo\obj\Debug\Modelo.pdb
+C:\Projetos\ProgVisual2021\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Projeto\Modelo\bin\Debug\Modelo.dll
+C:\Projeto\Modelo\bin\Debug\Modelo.pdb
+C:\Projeto\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Projeto\Modelo\obj\Debug\Modelo.dll
+C:\Projeto\Modelo\obj\Debug\Modelo.pdb
