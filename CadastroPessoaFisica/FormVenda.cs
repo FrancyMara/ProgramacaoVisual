@@ -121,13 +121,13 @@ namespace CadastroPessoaFisica
         {
             if (!NovaVenda.Itens.Any())
             {
-                MessageBox.Show("Adicione itens na venda seu cabaço");
+                MessageBox.Show("Adicione itens na venda");
                 return;
             }
                 
 
             ControladorVenda.Objetos.Add(NovaVenda);
-            MessageBox.Show("FALOU VALEU");
+            MessageBox.Show("VENDA FINALIZADA");
             this.Close();
         }
 
