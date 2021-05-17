@@ -56,8 +56,5 @@ C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.exe
 C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.pdb
 C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormCategoria.resources
 C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormVendedor.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormCategoria.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormPagamento.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormProduto.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormVendedor.resources
-C:\Projetos\ProgVisual2021\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormVenda.resources
+C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormPagamento.resources
+C:\Projeto\CadastroPessoaFisica\obj\Debug\CadastroPessoaFisica.FormProduto.resources
